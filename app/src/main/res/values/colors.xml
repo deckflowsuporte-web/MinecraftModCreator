@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="minecraft_green">#4CAF50</color>
+    <color name="minecraft_brown">#8D6E63</color>
+    <color name="minecraft_blue">#64B5F6</color>
+    <color name="minecraft_sand">#F5F5DC</color>
+    <color name="minecraft_dark">#1E1E1E</color>
+    <color name="minecraft_lava">#FF5722</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
