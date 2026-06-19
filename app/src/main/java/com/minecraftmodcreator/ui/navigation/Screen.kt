@@ -64,6 +64,47 @@ sealed class Screen(
         fun createRoute(modId: String) = "export/$modId"
     }
 
+    // New Creator Screens
+    data object ModTypeSelection : Screen(
+        route = "mod_type_selection",
+        title = "Choose Type"
+    )
+
+    data object ModMetadata : Screen(
+        route = "mod_metadata/{modId}",
+        title = "Mod Info"
+    ) {
+        fun createRoute(modId: String) = "mod_metadata/$modId"
+    }
+
+    data object TextureEditor : Screen(
+        route = "texture_editor/{modId}/{textureId}",
+        title = "Texture Editor"
+    ) {
+        fun createRoute(modId: String, textureId: String = "new") = "texture_editor/$modId/$textureId"
+    }
+
+    data object XRayEditor : Screen(
+        route = "xray_editor/{modId}",
+        title = "X-Ray Editor"
+    ) {
+        fun createRoute(modId: String) = "xray_editor/$modId"
+    }
+
+    data object GlowEditor : Screen(
+        route = "glow_editor/{modId}",
+        title = "Glow Editor"
+    ) {
+        fun createRoute(modId: String) = "glow_editor/$modId"
+    }
+
+    data object InterfaceEditor : Screen(
+        route = "interface_editor/{modId}",
+        title = "Interface Editor"
+    ) {
+        fun createRoute(modId: String) = "interface_editor/$modId"
+    }
+
     companion object {
         val bottomNavItems = listOf(Home, Create, Mods, Templates)
     }

@@ -447,6 +447,7 @@ private fun getElementColor(type: ModElementType): androidx.compose.ui.graphics.
         ModElementType.ARMOR -> ArmorColor
         ModElementType.MOB -> MobColor
         ModElementType.RECIPE -> RecipeColor
+        else -> androidx.compose.ui.graphics.Color(0xFF9E9E9E)
     }
 }
 
@@ -458,5 +459,6 @@ private fun getElementEmoji(type: ModElementType): String {
         ModElementType.ARMOR -> "🛡️"
         ModElementType.MOB -> "🐱"
         ModElementType.RECIPE -> "🍖"
+        else -> type.emoji
     }
 }

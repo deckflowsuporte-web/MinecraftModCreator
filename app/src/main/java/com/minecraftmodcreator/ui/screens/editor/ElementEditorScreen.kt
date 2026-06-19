@@ -255,6 +255,11 @@ private fun ElementPropertiesSection(
                 ModElementType.ARMOR -> ArmorPropertiesEditor(element, onPropertyChange)
                 ModElementType.MOB -> MobPropertiesEditor(element, onPropertyChange)
                 ModElementType.RECIPE -> RecipePropertiesEditor(element, onPropertyChange)
+                else -> Text(
+                    text = "${element.type.displayName} editor coming soon!",
+                    modifier = Modifier.padding(16.dp),
+                    style = MaterialTheme.typography.bodyLarge
+                )
             }
         }
     }
@@ -552,5 +557,6 @@ private fun getElementEmoji(type: ModElementType): String {
         ModElementType.ARMOR -> "🛡️"
         ModElementType.MOB -> "🐱"
         ModElementType.RECIPE -> "🍖"
+        else -> type.emoji
     }
 }

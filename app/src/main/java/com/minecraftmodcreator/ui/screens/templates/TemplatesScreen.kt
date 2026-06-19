@@ -269,6 +269,7 @@ private fun getElementTypeColor(type: com.minecraftmodcreator.domain.model.ModEl
         com.minecraftmodcreator.domain.model.ModElementType.ARMOR -> ArmorColor
         com.minecraftmodcreator.domain.model.ModElementType.MOB -> MobColor
         com.minecraftmodcreator.domain.model.ModElementType.RECIPE -> RecipeColor
+        else -> Color(0xFF9E9E9E)
     }
 }
 
@@ -280,5 +281,6 @@ private fun getElementEmoji(type: com.minecraftmodcreator.domain.model.ModElemen
         com.minecraftmodcreator.domain.model.ModElementType.ARMOR -> "🛡️"
         com.minecraftmodcreator.domain.model.ModElementType.MOB -> "🐱"
         com.minecraftmodcreator.domain.model.ModElementType.RECIPE -> "🍖"
+        else -> type.emoji
     }
 }
